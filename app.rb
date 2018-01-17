@@ -8,7 +8,8 @@ get '/' do
   end
 
 post '/piglatinize' do
-  @user_phrase = params[:user_phrase]
+pl = PigLatinizer.new
+  @user_phrase = pl.to_pig_latin(params[:user_phrase])
   erb :results
 end
 
