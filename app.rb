@@ -9,7 +9,7 @@ get '/' do
 
 post '/piglatinize' do
   @user_phrase = params[:user_phrase]
-
+  erb :results
 end
 
 end
